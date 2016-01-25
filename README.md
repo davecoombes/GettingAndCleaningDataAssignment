@@ -1,5 +1,7 @@
 # GettingAndCleaningDataAssignment
+
 The repository contains a script run_analysis.R that performs the following steps:
+
 1. install and load 'dplyr' package
 2. load activity and feature names
 3. load accelerometer, subject and activity data sets for both training and test data
