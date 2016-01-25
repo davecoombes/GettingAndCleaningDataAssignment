@@ -9,4 +9,4 @@ The repository contains a script run_analysis.R that performs the following step
 5. merge accelerometer, subject and activity data for both training and test data
 6. combines training and test data
 7. extract variables that relate to mean and standard deviation of measurements
-8. group, summarise and order data by subject and acitivity and output to file
+8. group, summarise and order data by subject and acitivity and output to file 'tidy.txt'

@@ -1,5 +1,7 @@
-install.packages("dplyr")
-library(dplyr)
+if(!require("dplyr")) {
+    install.packages("dplyr")
+}
+require(dplyr)
 
 activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")
 feature_names <- read.table(file="./UCI HAR Dataset/features.txt", stringsAsFactors = FALSE)
@@ -22,9 +24,6 @@ y_test_activities <- merge(y_test, activity_labels)
 
 names(y_train_activities) <- c("activity_id", "activity_label")
 names(y_test_activities) <- c("activity_id", "activity_label")
-
-# training_data <- cbind(subject_train, activity_label = y_train_activities$activity_label, x_train)
-# test_data <- cbind(subject_test, activity_label = y_test_activities$activity_label, x_test)
 
 training_data <- cbind(subject_train, y_train_activities, x_train)
 test_data <- cbind(subject_test, y_test_activities, x_test)
